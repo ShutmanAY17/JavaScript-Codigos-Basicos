@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <title>Selection Sort</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">4CM3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Condicionales
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="IfElse.html">Numero mas mayor entre 3</a></li> 
+                    <li><a class="dropdown-item" href="Votar.html">Puedo votar?</a></li>
+                    <li><a class="dropdown-item" href="Switch.html">Switch Case</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ciclos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="ParesFor.html">Pares 1 - 100 For</a></li> 
+                    <li><a class="dropdown-item" href="SumatoriaFor.html">Sumatoria 100 For</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="ParesWhile.html">Pares 1 - 100 While</a></li>
+                    <li><a class="dropdown-item" href="SumatoriaWhile.html">Sumatoria 100 While</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="ParesDoWhile.html">Pares 1 - 100 do-While</a></li>
+                    <li><a class="dropdown-item" href="SumatoriaDoWhile.html">Sumatoria 100 do-While</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Arreglos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="BubbleSort.html">Bubble sort</a></li> 
+                    <li><a class="dropdown-item" href="Insercion.html">Insertion sort</a></li>
+                    <li><a class="dropdown-item" href="SeleccionSort.html">Selection sort</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Operaciones Base
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="ParImpar.html">Par o Impar</a></li>
+                    <li><a class="dropdown-item" href="Multiplicaciones.html">Tablas de multiplicar</a></li>  
+                    <li><a class="dropdown-item" href="ProductoSumas.html">Producto de sumas (pendiente)</a></li>
+                    <li><a class="dropdown-item" href="MayorDelArreglo.html">Numero Mayor en un arreglo</a></li>
+                    <li><a class="dropdown-item" href="SumaArreglos.html">Suma de Arreglos</a></li>
+                    <li><a class="dropdown-item" href="PromedioDeNNumeros.html">Media Aritmetica</a></li>
+                    <li><a class="dropdown-item" href="OperacionesCadenas.html">Operaciones con textos</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </nav>
+    </div>
+    <div class="container">
+        <script type="text/javascript">
+            let n = prompt("¿Cuantos valores quieres escribir?");
+            let min, aux;
+            var a,b,c;
+            let D = [n-1];
+            for (let i = 0; i < n; i++) {
+                D[i] = prompt("Incerta tu valor numero " + (parseInt(i)+1));
+            }
+            document.write("Los numeros sin ordenar son: " + D + "<br/>");
+            for (let i = 0; i < D.length; i++) {
+                min = i;
+                for (let j = i+1; j < D.length; j++) {
+                    if (D[min] > D[j]) {
+                        min = j;
+                    }
+                }
+                aux = D[min];
+                D[min] = D[i];
+                D[i] = aux;
+            }
+            document.write("<br/>Los numeros ordenados son: " + D);
+        </script>
+    </div>
+</body>
+</html>
